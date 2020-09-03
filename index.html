@@ -32,9 +32,9 @@
                             <ul class="navbar-nav mr-auto ">
                                 <li class="active nav-item mr-2"><a class="nav-link" href="index.html"><span>Play
                                             Now</span></a></li>
-                                <li class="active nav-item mr-2"><a class="nav-link" href="#classes"><span>How to
+                                <li class="active nav-item mr-2"><a class="nav-link" href="#how-to"><span>How to
                                             Play</span></a></li>
-                                <li class="active nav-item mr-2"><a class="nav-link" href="#Findus"><span>Help
+                                <li class="active nav-item mr-2"><a class="nav-link" href="#send-message"><span>Help
                                         </span></a></li>
                             </ul>
                         </div>
@@ -44,34 +44,151 @@
             </div>
         </div>
     </header>
-    <section>
-        <div id="computer-choice"></div>
-        <div id="user-choice">
-            <form action="/action_page.php">
-                <label for="cars">your Choice:</label>
+    <section class="container-fluid game-played">
+        <div class="no-gutters">
+            <div class="raw">
+                <div class="col">
+                    <h1 class="game-heading">Lets Play!</h1>
+                </div>
+                <div class="col">
+                    <h3 class="game-heading">Round: <span id="rounds">1</span></h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="computer-choice center col">
+                    <h3 class="user-choice-heading">Computer Choice:</h3>
+                    <p id="computer-choice"> ? </p>
+                </div>
+                <div class="user-choice center col">
+                    <form>
+                        <label class="user-choice-heading">
+                            Your Choices:
+                        </label>
 
-                <div>
-                    <input type="radio" id="rock" name="choices" value="rock"> rock
-                    <input type="radio" id="paper" name="choices" value="paper"> paper
-                    <input type="radio" id="scissors" name="choices" value="scissors" checked="checked"> scissors
+                        <div class="form-check choices">
+                            <input class="form-check-input" type="radio" name="choices" id="rock" value="rock">
+                            <label class="form-check-label" for="rock">
+                                Rock
+                            </label>
+                        </div>
+                        <div class="form-check choices">
+                            <input class="form-check-input" type="radio" name="choices" id="paper" value="paper">
+                            <label class="form-check-label" for="paper">
+                                Paper
+                            </label>
+                        </div>
+                        <div class="form-check choices">
+                            <input class="form-check-input" type="radio" name="choices" id="scissors" value="scissors">
+                            <label class="form-check-label" for="scissors">
+                                Scissors
+                            </label>
+                        </div>
+                        <button class="play-button btn btn-success" type="button" onclick="playGame()">play</button>
+                    </form>
                 </div>
 
-                <!-- <select name="choices" id="choices">
-            <option value="rock">rock</option>
-            <option value="paper">paper</option>
-            <option value="scissors">scissors</option>
-        </select> -->
-
-                <button type="button" onclick="playGame()">play</button>
-            </form>
+            </div>
         </div>
-        <p class="score-label">Round: <span id="rounds">1</span></p>
-        <p class="score-label">Human Score: <span id="cscore">0</span></p>
-        <p class="score-label">Computer Score: <span id="uscore">0</span></p>
-        <p class="score-label">results <span id="result"></span></p>
+        <div class="row">
+            <div class="col center">
+                <p class="score">Computer Score: <span id="cscore">0</span></p>
+            </div>
+            <div class="col center">
+                <p class="score">User Score: <span id="uscore">0</span></p>
+            </div>
 
-
+        </div>
+        <div class="row ">
+            <div class="col results center">
+                <p class="score-label">Summary: <br> <span id="result"></span></p>
+            </div>
+        </div>
     </section>
+
+    <section class="container-fluid how-to">
+        <div class="no-gutters">
+            <div class="row">
+                <div class="col">
+                    <h1 class="center" id="how-to">How To Play</h1>
+                </div>
+                <article>
+                    <h3>Why is Rock Paper Scissors played?</h3>
+                    <p> This game is played by children and adults and is popular all over the world. Apart from being a
+                        game
+                        played to pass time, the game is usually played in situations where something has to be chosen.
+                        It is
+                        similar in that way to other games like flipping the coin, throwing dice or drawing straws.
+                        There is no room
+                        for cheating or for knowing what the other person is going to do so the results are usually very
+                        satisfying
+                        with no room for fighting or error.</p>
+                    <h3> What are the rules of RPS?</h3>
+                    <p> Although the game has a lot of complexity to it, the rules to play it are pretty simple.
+                        The game is played where players deliver hand signals that will represent the elements of the
+                        game; rock,
+                        paper and scissors. The outcome of the game is determined by 3 simple rules:</p>
+                    <ul>
+                        <li>Rock wins against scissors.</li>
+                        <li> Scissors win against paper.</li>
+                        <li> Paper wins against rock.</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+        </div>
+    </section>
+        <section class="container-fluid contact-form">
+            <div class="row px-lg-5">
+                <div class="col">
+                    <a id="send-message">
+                        <h2 class="heading  text-center">
+                            Send Us a Message
+                        </h2>
+                    </a>
+                    <div class="center-form">
+                        <form method="post" action="index.html">
+                            <input type="text" name="name" id="name" class="form-control" placeholder= "Name"
+                                required>
+                            <input type="email" name="email" id="emailaddress" class="form-control" placeholder="Email"
+                                required>
+                            <textarea rows="5" name="msg" id="msg" class="form-control" placeholder="Your Message" required>
+                    </textarea>
+    
+                            <button type="submit" class="btn btn-secondary btn-style">
+                                <span>Send Now!</span>
+                            </button>
+    
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 offset-md-9 menu">
+                <hr>
+                <nav class="navbar navbar-dark navbar-expand-lg">
+                    <button class="navbar-toggler ml-auto nav-bg-color" type="button" data-toggle="collapse"
+                        data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span></button>
+
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav mr-auto ">
+                            <li class="active nav-item mr-2"><a class="nav-link" href="index.html"><span>Play
+                                        Now</span></a></li>
+                            <li class="active nav-item mr-2"><a class="nav-link" href="#how-to"><span>How to
+                                        Play</span></a></li>
+                            <li class="active nav-item mr-2"><a class="nav-link" href="#send-message"><span>Help
+                                    </span></a></li>
+                        </ul>
+                    </div>
+
+                </nav>
+            </div>
+</div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

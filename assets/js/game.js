@@ -4,6 +4,8 @@ let currentRoundNumber = 1;
 const displaycomputerScore = document.getElementById("cscore");
 const displayhumanScore = document.getElementById("uscore");
 const displaycurrentRoundNumber = document.getElementById("rounds");
+const displaycomputerchoice = document.getElementById("computer-choice");
+
 
 
 
@@ -16,34 +18,34 @@ const getUserChoice = userInput => {
 const getComputerChoice = () => {
     const randomNumber = Math.floor(Math.random() * 3);
     switch (randomNumber) {
-        case 0: return 'rock'
-        case 1: return 'paper'
-        case 2: return 'scissors'
+        case 0: return 'Rock'
+        case 1: return 'Paper'
+        case 2: return 'Scissors'
     }
 }
 
 const determineWinner = (userChoice, computerChoice) => {
-    if (userChoice === computerChoice) { return 'the game is a tie' }
+    if (userChoice === computerChoice) { return 'The Game is a tie' }
 
     if (userChoice === 'rock') {
-        if (computerChoice === 'paper') {
-            return 'The computer won!';
+        if (computerChoice === 'Paper') {
+            return 'The Computer Won!';
         } else {
-            return 'You won!';
+            return 'You Won!';
         }
     }
     if (userChoice === 'paper') {
-        if (computerChoice === 'scissors') {
+        if (computerChoice === 'Scissors') {
             return 'The Computer Won!';
         } else {
-            return 'you Won!'
+            return 'You Won!'
         }
     }
     if (userChoice === 'scissors') {
-        if (computerChoice === 'rock') {
+        if (computerChoice === 'Rock') {
             return 'The Computer Won!';
         } else {
-            return 'you Won!'
+            return 'You Won!'
         }
     }
 };
@@ -60,16 +62,17 @@ const playGame = () => {
 
     const updateScore = () => {
         if (winner === 'The Computer Won!') {
-            humanScore++;
-        } else if (winner === 'you Won!') {
             computerScore++;
+        } else if (winner === 'You Won!') {
+            humanScore++;
         }
     };
     const advanceRound = () => currentRoundNumber++;
-    
-    document.getElementById("result").innerHTML = '<div class="results">You Threw: ' + userChoice + '<br>' + 'The computer Threw: ' + computerChoice + '<br>' + determineWinner(userChoice, computerChoice) + '</div>';
-    updateScore();
 
+    document.getElementById("result").innerHTML = '<div class="summary"> ' + determineWinner(userChoice, computerChoice) + '</div>';
+    updateScore();
+    
+    displaycomputerchoice.innerText = computerChoice;
     displaycomputerScore.innerText = computerScore;
     displayhumanScore.innerText = humanScore;
     displaycurrentRoundNumber.innerText = currentRoundNumber;

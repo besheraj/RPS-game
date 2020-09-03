@@ -4,9 +4,13 @@ html {
     margin: 0;
     padding: 0;
 }
+
+/* Header */
+
 header {
-    margin: 10px;
+    margin: 0 ;
     background-color: #fafafa;
+    padding-top: 5px;
 }
 .logo {
     float: left;
@@ -35,4 +39,127 @@ header span {
 }
 .menu nav {
     padding: 0;
+}
+/* Game Styling */
+
+.computer-choice {
+    height: 300px;
+    width: 180px;
+
+    border: 1px black solid;
+    border-radius: 10px;
+}
+.user-choice {
+    height: 300px;
+    width: 180px;
+    border: 1px black solid;
+    border-radius: 10px;
+
+}
+
+.game-heading {
+    text-align: center;
+    font-family: Open Sans,'Times New Roman', Times, serif;
+    padding: 20px 40px;
+    font-weight: 1300px;
+    color: #61988E;
+}
+
+.user-choice-heading {
+    margin: 15px 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #61988E;
+
+}
+.choices {
+    margin: 10px 0;
+    font-weight: 500;
+    color: #61988E;
+
+}
+.play-button {
+    font-weight: bold;
+    margin: 10px;
+    padding: 5px;
+    width: 100px;
+}
+#computer-choice {
+    margin: 50px 0;
+    font-weight: 400;
+    font-size: 2rem;
+    text-align: center;
+    color: #61988E;
+
+}
+.results {
+    text-align: center;
+    border: 1px black inset;
+    border-radius: 10px; 
+    height: 80px;
+    color: #61988E;
+
+}
+.summary {
+
+    color: blue;
+
+    
+}
+.score-label {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #61988E;
+
+}
+.score {
+    font-weight: bold;
+    color: #61988E;
+
+}
+.game-played {
+    background-image: url('../images/wallpaper.jpg');
+    background-repeat: no-repeat;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.center {
+    text-align: center;
+}
+/* How to Play  */
+.how-to {
+    background-color: rgba(236, 156, 193, 0.815);
+    padding: 30px;
+}
+/* Contact Form */
+.contact-form {
+    padding: 50px;
+    text-align: center;
+    background-color: #e295cf;
+
+}
+.contact-form h4 {
+    padding: 15px;
+}
+.contact-form botton {
+    margin: 15px;
+}
+.form-control {
+    margin-bottom: 10px;
+}
+.btn-secondary {
+    background-color: #e295cf;
+}
+/* Footer */
+hr {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+}
+footer {
+    background-color: #e295cf;
 }
