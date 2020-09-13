@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100;0,200;0,300;0,400;0,500;0,531;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,531;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap');
 
 html {
     margin: 0;
@@ -6,76 +6,84 @@ html {
 }
 
 /* Header */
+body {
+    font-family: 'Grandstander',Times, serif
 
+}
 header {
     margin: 0 ;
-    background-color: #fafafa;
+    background-color: #CDD6DD;
     padding-top: 5px;
+
 }
 .logo {
     float: left;
-    font-family: Monoton,Times, serif;
-    letter-spacing: 4px;
-    text-transform: uppercase;
     padding-left: 20px; 
 }
 
 .logo h1  {
-    font-weight: 400;
-    color: #61988E;
-    font-size: 2em;
-    
+    font-weight: 500;
+    color: #CD8987;
+    font-size: 2rem;
+    font-family: 'Press Start 2P',Times, serif;
+    letter-spacing: 4px;
 }
 header span {
     font-size: 17px;
-    color: #61988E;
+    color: #CD8987;
     font-weight: 600;
     padding: 0;
     margin: 0;
 
 }
 .nav-bg-color {
-    background: #61988E
+    background: #CD8987
 }
 .menu nav {
     padding: 0;
 }
 /* Game Styling */
 
-.computer-choice {
+.computer-choice-box {
     height: 300px;
     width: 180px;
-
-    border: 1px black solid;
+    border: 1px #595758 solid;
     border-radius: 10px;
 }
 .user-choice {
     height: 300px;
     width: 180px;
-    border: 1px black solid;
+    border: 1px #595758 solid;
     border-radius: 10px;
 
 }
 
 .game-heading {
     text-align: center;
-    font-family: Open Sans,'Times New Roman', Times, serif;
-    padding: 20px 40px;
-    font-weight: 1300px;
-    color: #61988E;
+    font-weight: 900;
+    color: #595758;
+    padding-top: 50px;
+    letter-spacing: 3px;
+}
+.round-heading {
+    text-align: center;
+    font-weight: 700;
+    color: #595758;
+    padding: 40px;
+    text-decoration: underline;
 }
 
 .user-choice-heading {
     margin: 15px 0;
     font-weight: 700;
     font-size: 1.5rem;
-    color: #61988E;
+    color: #595758;
 
 }
 .choices {
     margin: 10px 0;
     font-weight: 500;
-    color: #61988E;
+    color: #595758;
 
 }
 .play-button {
@@ -89,54 +97,69 @@ header span {
     font-weight: 400;
     font-size: 2rem;
     text-align: center;
-    color: #61988E;
+    color: #595758;
 
 }
 .results {
     text-align: center;
-    border: 1px black inset;
+    border: 1px #CDD6DD inset;
     border-radius: 10px; 
-    height: 80px;
-    color: #61988E;
+    height: 120px;
+    color: #595758;
 
 }
 .summary {
 
-    color: blue;
+    color: #12263A;
 
     
 }
 .score-label {
     font-weight: bold;
     font-size: 1.5rem;
-    color: #61988E;
+    color: #595758;
 
 }
 .score {
     font-weight: bold;
-    color: #61988E;
-
+    color: #595758;
+    text-decoration: underline;
 }
 .game-played {
     background-image: url('../images/wallpaper.jpg');
     background-repeat: no-repeat;
-    -ms-background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
     background-size: cover;
+
 }
 .center {
     text-align: center;
 }
-/* How to Play  */
+/* how to play  */
 .how-to {
     background-color: rgba(236, 156, 193, 0.815);
-    padding: 30px;
+    padding: 100px;
 }
-/* Contact Form */
+.how-to h1 {
+    padding-top: 50px;
+    color: #595758;
+
+}
+.how-to h3 {
+    padding: 20px;
+    color: #595758;
+
+}
+.how-to p {
+    padding: 20px;
+    color: #595758;
+}
+.how-to li {
+    padding-left: 20px;
+    color: #595758;
+}
+/* contact form  */
 .contact-form {
-    padding: 50px;
+    padding: 120px;
     text-align: center;
     background-color: #e295cf;
 
@@ -153,13 +176,39 @@ header span {
 .btn-secondary {
     background-color: #e295cf;
 }
-/* Footer */
+/* footer styling  */
+
+footer {
+    background-color: #CDD6DD;
+}
 hr {
     width: 100%;
     padding: 0;
     margin: 0;
 
 }
-footer {
-    background-color: #e295cf;
+
+.social {
+    padding-bottom: 10px;
+    text-align: center;
+
+}
+.social li {
+    padding: 10px 50px;
+
+}
+.social ul li {
+    margin-top: 10px
+}
+
+.social li a i  {
+
+    padding: 12px 0;
+    font-size: 30px;
+    line-height: 7px;
+    text-align: center;
+    color: #CD8987;
+}
+.social li a i:hover {
+    color: #12263A;
 }

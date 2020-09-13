@@ -10,9 +10,17 @@
         type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <title>Rock Paper Scissor</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_xm47l1ExyXOanCyGgbOhU");
+        })();
+    </script>
 </head>
 
 <body>
+    <!-- header  -->
     <header class="container-fluid">
         <div class="no-gutters">
             <div class="row">
@@ -44,18 +52,19 @@
             </div>
         </div>
     </header>
+    <!-- game  -->
     <section class="container-fluid game-played">
         <div class="no-gutters">
             <div class="raw">
                 <div class="col">
-                    <h1 class="game-heading">Lets Play!</h1>
+                    <h2 class="game-heading">Lets Play!</h2>
                 </div>
                 <div class="col">
-                    <h3 class="game-heading">Round: <span id="rounds">1</span></h1>
+                    <h4 class="round-heading">Round: <span id="rounds">1</span></h4>
                 </div>
             </div>
             <div class="row">
-                <div class="computer-choice center col">
+                <div class="computer-choice-box center col">
                     <h3 class="user-choice-heading">Computer Choice:</h3>
                     <p id="computer-choice"> ? </p>
                 </div>
@@ -104,12 +113,12 @@
             </div>
         </div>
     </section>
-
+    <!-- how to play section  -->
     <section class="container-fluid how-to">
         <div class="no-gutters">
             <div class="row">
                 <div class="col">
-                    <h1 class="center" id="how-to">How To Play</h1>
+                    <h2 class="center" id="how-to">How To Play</h2>
                 </div>
                 <article>
                     <h3>Why is Rock Paper Scissors played?</h3>
@@ -135,59 +144,70 @@
                 </article>
             </div>
         </div>
-        </div>
     </section>
-        <section class="container-fluid contact-form">
-            <div class="row px-lg-5">
+    <!-- contact form section  -->
+    <section class="container-fluid contact-form">
+        <div class="row">
+            <div class="col">
+                <h2 class="heading  text-center">
+                    Send Us a Message
+                </h2>
                 <div class="col">
-                    <a id="send-message">
-                        <h2 class="heading  text-center">
-                            Send Us a Message
-                        </h2>
-                    </a>
-                    <div class="center-form">
-                        <form method="post" action="index.html">
-                            <input type="text" name="name" id="name" class="form-control" placeholder= "Name"
-                                required>
-                            <input type="email" name="email" id="emailaddress" class="form-control" placeholder="Email"
-                                required>
-                            <textarea rows="5" name="msg" id="msg" class="form-control" placeholder="Your Message" required>
-                    </textarea>
-    
-                            <button type="submit" class="btn btn-secondary btn-style">
-                                <span>Send Now!</span>
-                            </button>
-    
-                        </form>
-                    </div>
+                    <h4>Tell us about your experience!</h4>
+                </div>
+                <div class="center-form col">
+                    <form onsubmit="return sendMail()">
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Name" required>
+                        <input type="email" name="emailaddress" id="emailaddress" class="form-control"
+                            placeholder="Email" required>
+                        <textarea rows="5" name="msg" id="msg" class="form-control" placeholder="Your Message" required>
+                </textarea>
+
+                        <button type="submit" class="btn btn-secondary btn-style">
+                            <span>Send Now!</span>
+                        </button>
+
+                    </form>
                 </div>
             </div>
-        </section>
-        <hr>
+        </div>
+    </section> <!-- footer  -->
     <footer class="container-fluid">
-        <div class="row">
-            <div class="col-md-3 offset-md-9 menu">
+        <div class="raw">
+            <div class="col-12 social">
                 <hr>
-                <nav class="navbar navbar-dark navbar-expand-lg">
-                    <button class="navbar-toggler ml-auto nav-bg-color" type="button" data-toggle="collapse"
-                        data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span></button>
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="http://www.facebook.com" target="_blank">
+                            <i class="fa fa-facebook"></i>
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                    </li>
 
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav mr-auto ">
-                            <li class="active nav-item mr-2"><a class="nav-link" href="index.html"><span>Play
-                                        Now</span></a></li>
-                            <li class="active nav-item mr-2"><a class="nav-link" href="#how-to"><span>How to
-                                        Play</span></a></li>
-                            <li class="active nav-item mr-2"><a class="nav-link" href="#send-message"><span>Help
-                                    </span></a></li>
-                        </ul>
-                    </div>
+                    <li class="list-inline-item">
+                        <a href="http://www.twitter.com" target="_blank">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                    </li>
 
-                </nav>
+
+                    <li class="list-inline-item">
+                        <a href="http://www.instagram.com" target="_blank">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                            <span class="sr-only">Instagram</span>
+                        </a>
+                    </li>
+
+                    <li class="list-inline-item">
+                        <a href="http://www.youtube.com" target="_blank">
+                            <i class="fa fa-youtube" aria-hidden="true"></i>
+                            <span class="sr-only">youtube</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-</div>
+        </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -199,6 +219,8 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
     <script src="assets/js/game.js"></script>
+    <script src="assets/js/send-email.js"></script>
+
 </body>
 
 </html>
